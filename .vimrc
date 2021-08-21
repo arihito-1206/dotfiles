@@ -1,4 +1,3 @@
-
 """"""""""""""""""""""""
 "      basics
 """"""""""""""""""""""""
@@ -8,6 +7,9 @@ set tabstop=2 " tab
 set wildmenu
 set autoindent
 set hidden " バッファ切替時の警告メッセージOFF
+set laststatus=2 " 常にStatus Lineを表示する
+
+
 """"""""""""""""""""""""
 "      key bind
 """"""""""""""""""""""""
@@ -19,10 +21,12 @@ nnoremap <silent> <C-k> :bnext<CR>
 """"""""""""""""""""""""
 "      補完
 """"""""""""""""""""""""
-inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap { {}<LEFT>
+inoremap {<Enter> {}<LEFT><CR><ESC><S-o>
 inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<LEFT><CR><ESC><S-o>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
 """"""""""""""""""""""""
 "     python
@@ -79,3 +83,22 @@ if dein#check_install()
 endif
 
 " ------------------------------------------------------------
+""""""""""""""""""""""""
+"      coc.nvim
+""""""""""""""""""""""""
+" coc.nvim のステータスメッセージを statusline に表示させる
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Remap keys for gotos
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"rnmap <silent>gr<Plug>(coc-references)
+
+""""""""""""""""""""""""
+"      cursor
+""""""""""""""""""""""""
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
