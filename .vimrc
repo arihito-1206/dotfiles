@@ -3,12 +3,12 @@
 """"""""""""""""""""""""
 set number " 行番号
 set hlsearch " 検索結果をハイライト
+set ignorecase "大文字小文字を区別せず検索
 set tabstop=2 " tab
 set wildmenu
 set autoindent
 set hidden " バッファ切替時の警告メッセージOFF
 set laststatus=2 " 常にStatus Lineを表示する
-
 
 """"""""""""""""""""""""
 "      key bind
@@ -95,6 +95,8 @@ endif
 "nmap <silent> gi <Plug>(coc-implementation)
 "rnmap <silent>gr<Plug>(coc-references)
 
+
+
 """"""""""""""""""""""""
 "      cursor
 """"""""""""""""""""""""
@@ -102,3 +104,11 @@ let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
+
+
+
+""""""""""""""""""""""""
+"      popup color
+""""""""""""""""""""""""
+hi Pmenu ctermbg=8 ctermfg=15
+hi PmenuSel ctermbg=13 ctermfg=0
