@@ -13,3 +13,9 @@ vim.cmd('syntax on')
 vim.cmd('packadd vim-jetpack')
 require('jetpack.plugins')
 
+-- Key map
+vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
+
+
+-- color scheme
+vim.cmd('colorscheme nightfox')
