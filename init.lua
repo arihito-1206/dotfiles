@@ -18,4 +18,5 @@ vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
 
 
 -- color scheme
-vim.cmd('colorscheme nightfox')
+-- vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme iceberg')

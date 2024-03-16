@@ -2,7 +2,9 @@ require('jetpack.packer').startup(function(use)
     use { 'tani/vim-jetpack' } -- bootstrap
     -- use 'ntk148v/vim-horizon'
     use 'preservim/nerdtree' -- ファイルエクスプローラ
-    use 'EdenEast/nightfox.nvim' -- カラースキーム
+    -- カラースキーム
+    use 'EdenEast/nightfox.nvim'
+    use 'cocopon/iceberg.vim' -- カラースキーム
     use 'junegunn/fzf.vim' -- 検索
     use {'junegunn/fzf', run = 'call fzf#install()' }
     use {
