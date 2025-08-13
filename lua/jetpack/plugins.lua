@@ -18,9 +18,16 @@ require('jetpack.packer').startup(function(use)
     }
     use 'airblade/vim-gitgutter' -- Git の差分を表示させる
     use 'tpope/vim-commentary' -- コメントアウトの操作性向上
-    use {'neoclide/coc.nvim', branch = 'release'}
-    use {'fatih/vim-go'}
+    use 'cohama/lexima.vim' -- 括弧補完
+    -- use {'neoclide/coc.nvim', branch = 'release'}
+    -- use {'fatih/vim-go'}
     -- use 'sheerun/vim-polyglot' -- Syntax highlight
+    -- ### nvim-lsp 関連 ###
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-nvim-lsp"
 end)
 
 -- termguicolorsを設定
