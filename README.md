@@ -1,4 +1,17 @@
 # dotfiles
+## WezTerm のセットアップ
+### インストール
+```
+brew install --cask wezterm@nightly
+```
+※一部 nightly 限定機能を使っているため
+
+### configファイルにシンボリックリンクリンクを貼る
+```
+mkdir -p ~/.config/wezterm
+ln -s {git repo directory}/dotfiles/wezterm/* ~/.config/wezterm
+```
+
 ## neovim のセットアップ
 ### 方針
 - プラグイン管理は[vim-jetpack](https://github.com/tani/vim-jetpack)を使う
