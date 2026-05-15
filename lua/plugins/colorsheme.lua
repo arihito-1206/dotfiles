@@ -4,8 +4,18 @@ return {
     lazy = false,
     priority = 1000,
 
+   -- config = function()
+   --   vim.cmd.colorscheme("iceberge")
+   -- end,
+  },
+
+  {
+    "EdenEast/nightfox.nvim",
+    lazy = false,
+    priority = 1000,
+
     config = function()
-        vim.cmd.colorscheme("iceberg")
+        vim.cmd.colorscheme("nightfox")
     end,
   },
 }
